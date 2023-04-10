@@ -1,7 +1,6 @@
 import { Box } from '@mui/material'
 import { useState } from 'react'
-import { DialogContainer } from './components'
-
+import { CompanyCardContainer, DialogContainer } from './components'
 const ContentScript = () => {
   const [expanded, setExpanded] = useState(true)
   const [loading, setLoading] = useState(false)
@@ -14,6 +13,7 @@ const ContentScript = () => {
       setLoading={setLoading}
     >
       <Box>AdsGener</Box>
+      <CompanyCardContainer />
     </DialogContainer>
   )
 }
