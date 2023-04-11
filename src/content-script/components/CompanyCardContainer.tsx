@@ -81,7 +81,7 @@ function CompanyCardContainer() {
     // facebook, instagram, youtube, tiktok
     SOCIAL_MEDIA: { label: 'Social Media', value: 'SOCIAL_MEDIA' },
     LANDING_PAGE: { label: 'Landing Page', value: 'LANDING_PAGE' },
-    // essay, paragraph, paraphrasing, comprehension, summarizer, articles/blog
+    // essay,  articles, blog, paragraph, paraphrasing, comprehension, summarizer
     BLOG_POST: { label: 'Blog Post', value: 'BLOG_POST' },
     // sms, whatsapp, discord
     MESSAGING_CAMPAIGN: { label: 'Messaging Campaign', value: 'MESSAGING_CAMPAIGN' },
@@ -96,7 +96,7 @@ function CompanyCardContainer() {
     type: string,
     platform: string,
     logoUrl: string,
-    inputs = {},
+    inputs: any,
     response = {},
   ) => {
     return {
@@ -118,9 +118,14 @@ function CompanyCardContainer() {
       types.EMAIL.value,
       platforms.YAHOO.value,
       'yahoomaillogo.png',
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         subject: '',
         body: '',
@@ -132,9 +137,14 @@ function CompanyCardContainer() {
       types.EMAIL.value,
       platforms.GOOGLE.value,
       'gmaillogo.png',
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         subject: '',
         body: '',
@@ -148,10 +158,20 @@ function CompanyCardContainer() {
       types.ADS_COPY.value,
       platforms.FACEBOOK.value,
       'facebookads.png',
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -163,10 +183,20 @@ function CompanyCardContainer() {
       types.ADS_COPY.value,
       platforms.GOOGLE.value,
       'adsencelogo.png',
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -178,10 +208,20 @@ function CompanyCardContainer() {
       types.ADS_COPY.value,
       platforms.TWITTER.value,
       platforms.TWITTER.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -195,10 +235,20 @@ function CompanyCardContainer() {
       types.ECOMMERCE.value,
       platforms.AMAZON.value,
       platforms.AMAZON.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -210,10 +260,20 @@ function CompanyCardContainer() {
       types.ECOMMERCE.value,
       platforms.EBAY.value,
       platforms.EBAY.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -225,10 +285,20 @@ function CompanyCardContainer() {
       types.ECOMMERCE.value,
       platforms.FACEBOOK.value,
       platforms.FACEBOOK.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -240,14 +310,20 @@ function CompanyCardContainer() {
       types.ECOMMERCE.value,
       platforms.DEPOP.value,
       platforms.DEPOP.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
-      {
-        headline: '',
-        description: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
     ),
     objGenerator(
       'Wallmart Description',
@@ -255,10 +331,20 @@ function CompanyCardContainer() {
       types.ECOMMERCE.value,
       platforms.WALLMART.value,
       platforms.WALLMART.logo,
-      {
-        productName: '',
-        productDescription: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+        {
+          name: 'productDescription',
+          label: 'productDescription',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         headline: '',
         description: '',
@@ -272,9 +358,14 @@ function CompanyCardContainer() {
       types.SOCIAL_MEDIA.value,
       platforms.FACEBOOK.value,
       platforms.FACEBOOK.logo,
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         caption: '',
       },
@@ -285,9 +376,14 @@ function CompanyCardContainer() {
       types.SOCIAL_MEDIA.value,
       platforms.FACEBOOK.value,
       platforms.FACEBOOK.logo,
-      {
-        productName: '',
-      },
+      [
+        {
+          name: 'productName',
+          label: 'productName',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         post: '',
       },
@@ -298,9 +394,14 @@ function CompanyCardContainer() {
       types.SOCIAL_MEDIA.value,
       platforms.INSTAGRAM.value,
       platforms.INSTAGRAM.logo,
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         caption: '',
       },
@@ -311,9 +412,14 @@ function CompanyCardContainer() {
       types.SOCIAL_MEDIA.value,
       platforms.INSTAGRAM.value,
       platforms.INSTAGRAM.logo,
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         post: '',
       },
@@ -324,164 +430,94 @@ function CompanyCardContainer() {
       types.SOCIAL_MEDIA.value,
       platforms.LINKEDIN.value,
       platforms.LINKEDIN.logo,
-      {
-        description: '',
-      },
+      [
+        {
+          name: 'description',
+          label: 'Description',
+          caption: '',
+          example: '',
+        },
+      ],
       {
         post: '',
       },
     ),
   ]
   const allServices = [...email, ...adsCopy, ...ecommerce, ...socialMedia]
-  // const offeredProducts = [
-  //   {
-  //     title: 'Blog Post',
-  //     tagline: 'Blog Post Generator',
-  //     typeTags: [types.BLOG_POST.value],
-  //     platformTags: [platforms.WEB.value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Amazon Product Description',
-  //     tagline: '',
-  //     typeTags: [types.BLOG_POST.value],
-  //     platformTags: [platforms.WEB.value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Email Copy',
-  //     tagline: '',
-  //     typeTags: [types.EMAIL.value],
-  //     platformTags: [platforms.GOOGLE.value,platforms.YAHOO.value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Landing Page',
-  //     tagline: '',
-  //     typeTags: [types.LANDING_PAGE.value],
-  //     platformTags: [platforms.WEB.value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
 
-  //   {
-  //     title: 'Ad Copy',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'AI Writer',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Sentence Rewriter',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Social Post',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Meta Description',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Instagram Caption',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Facebook Post',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Paraphrasing',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Paragraph',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Linkedin Post',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Text Summaraizer',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'SMS Campaign',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  //   {
-  //     title: 'Whatsapp Campaign',
-  //     tagline: '',
-  //     typeTags: [types..value],
-  //     platformTags: [platforms..value],
-  //     logoUrl: '',
-  //     category: '',
-  //   },
-  // ]
   return (
-    <Box>
-      {companyData.map((company, index) => (
+    <Box
+      sx={{
+        overflow: 'auto',
+        height: '70vh',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3,1fr)',
+      }}
+    >
+      {allServices.map((service, index) => (
+        <ServiceCard key={index} {...service} />
+      ))}
+      {/* {companyData.map((company, index) => (
         <CompanyCard
           key={index}
           logoUrl={company.logoUrl}
           menuItems={company.menuItems}
           name={company.name}
         />
-      ))}
+      ))} */}
+    </Box>
+  )
+}
+
+interface ServiceInterface {
+  title: string
+  tagline: string
+  type: string
+  platform: string
+  logoUrl: string
+  inputs: any
+  response: any
+}
+
+type ServicesInterface = ServiceInterface[]
+
+const ServiceCard = ({
+  title,
+  tagline,
+  type,
+  platform,
+  logoUrl,
+  inputs,
+  response,
+}: ServiceInterface) => {
+  return (
+    <Box
+      sx={[
+        {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          aspectRatio: '1',
+          flexDirection: 'column',
+          borderRadius: 2,
+          boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px',
+          margin: 1,
+        },
+        (theme: any) => ({
+          '&:hover': {
+            cursor: 'pointer',
+            transform: 'scale(1.04)',
+          },
+        }),
+      ]}
+    >
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <img src={companyLogo} alt="Logo" style={{ height: '32px' }} />
+      </Box>
+      <Typography variant="body1" sx={{ fontSize: 10, pt: 1, pl: 1, pr: 1 }}>
+        {title}
+      </Typography>
+      {/* <Typography variant="body1">{tagline}</Typography> */}
     </Box>
   )
 }
