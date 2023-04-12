@@ -1,7 +1,9 @@
 import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
-import companyLogo from '../assets/icons/logo.png'
-function CompanyCard({ logoUrl, menuItems, name }: any) {
+import { useState } from 'react'
+import { Input, Select, TextArea } from '../components'
+import { pngIcons } from '../components/Icons'
+function CompanyCard({ itemLogo, menuItems, name }: any) {
   return (
     <Box sx={{ bgcolor: '#f5f5f5', p: 2 }}>
       <Box
@@ -14,7 +16,7 @@ function CompanyCard({ logoUrl, menuItems, name }: any) {
         }}
       >
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src={logoUrl} alt="Logo" style={{ height: '32px' }} />
+          <img src={itemLogo} alt="Logo" style={{ height: '32px' }} />
         </Box>
         <Typography variant="body1">{name}</Typography>
       </Box>
@@ -35,17 +37,17 @@ function CompanyCardContainer() {
   const companyData = [
     {
       name: 'Facebook',
-      logoUrl: companyLogo,
+      itemLogo: pngIcons.chatgpt,
       menuItems: ['Home', 'About', 'Contact'],
     },
     {
       name: 'Youtube',
-      logoUrl: companyLogo,
+      itemLogo: pngIcons.chatgpt,
       menuItems: ['Home', 'Products', 'Services', 'Contact'],
     },
     {
       name: 'Instagram',
-      logoUrl: companyLogo,
+      itemLogo: pngIcons.chatgpt,
       menuItems: ['Home', 'About', 'Services', 'Contact'],
     },
   ]
@@ -95,7 +97,8 @@ function CompanyCardContainer() {
     tagline: string,
     type: string,
     platform: string,
-    logoUrl: string,
+    itemLogo: string,
+    featureLogo: string,
     inputs: any,
     response = {},
   ) => {
@@ -104,7 +107,8 @@ function CompanyCardContainer() {
       tagline,
       type,
       platform,
-      logoUrl,
+      itemLogo,
+      featureLogo,
       inputs,
       response,
       favourite: false,
@@ -117,7 +121,8 @@ function CompanyCardContainer() {
       'Yahoo Mail Generator',
       types.EMAIL.value,
       platforms.YAHOO.value,
-      'yahoomaillogo.png',
+      pngIcons.yahoo,
+      pngIcons.yahoo,
       [
         {
           name: 'description',
@@ -136,7 +141,8 @@ function CompanyCardContainer() {
       'Gmail Generator',
       types.EMAIL.value,
       platforms.GOOGLE.value,
-      'gmaillogo.png',
+      pngIcons.gmail,
+      pngIcons.gmail,
       [
         {
           name: 'description',
@@ -157,7 +163,9 @@ function CompanyCardContainer() {
       'Facebook Ad Generator',
       types.ADS_COPY.value,
       platforms.FACEBOOK.value,
-      'facebookads.png',
+      pngIcons.facebook,
+      pngIcons.facebook,
+
       [
         {
           name: 'productName',
@@ -182,7 +190,9 @@ function CompanyCardContainer() {
       'Adsence Ad Generator',
       types.ADS_COPY.value,
       platforms.GOOGLE.value,
-      'adsencelogo.png',
+      pngIcons.adsense,
+      pngIcons.adsense,
+
       [
         {
           name: 'productName',
@@ -207,7 +217,9 @@ function CompanyCardContainer() {
       'Twitter Ad Generator',
       types.ADS_COPY.value,
       platforms.TWITTER.value,
-      platforms.TWITTER.logo,
+      pngIcons.twitter,
+      pngIcons.twitter,
+
       [
         {
           name: 'productName',
@@ -234,7 +246,9 @@ function CompanyCardContainer() {
       'Amazon Product Generator',
       types.ECOMMERCE.value,
       platforms.AMAZON.value,
-      platforms.AMAZON.logo,
+      pngIcons.amazon,
+      pngIcons.amazon,
+
       [
         {
           name: 'productName',
@@ -259,7 +273,9 @@ function CompanyCardContainer() {
       'Ebay Description Generator',
       types.ECOMMERCE.value,
       platforms.EBAY.value,
-      platforms.EBAY.logo,
+      pngIcons.ebay,
+      pngIcons.ebay,
+
       [
         {
           name: 'productName',
@@ -284,7 +300,9 @@ function CompanyCardContainer() {
       'Facebook Markeplace Generator',
       types.ECOMMERCE.value,
       platforms.FACEBOOK.value,
-      platforms.FACEBOOK.logo,
+      pngIcons.facebook,
+      pngIcons.facebook,
+
       [
         {
           name: 'productName',
@@ -309,7 +327,9 @@ function CompanyCardContainer() {
       'Depop Description Generator',
       types.ECOMMERCE.value,
       platforms.DEPOP.value,
-      platforms.DEPOP.logo,
+      pngIcons.depop,
+      pngIcons.depop,
+
       [
         {
           name: 'productName',
@@ -330,7 +350,9 @@ function CompanyCardContainer() {
       'Wallmart Description Generator',
       types.ECOMMERCE.value,
       platforms.WALLMART.value,
-      platforms.WALLMART.logo,
+      pngIcons.walmart,
+      pngIcons.walmart,
+
       [
         {
           name: 'productName',
@@ -357,7 +379,9 @@ function CompanyCardContainer() {
       'Facebook Story Generator',
       types.SOCIAL_MEDIA.value,
       platforms.FACEBOOK.value,
-      platforms.FACEBOOK.logo,
+      pngIcons.facebook,
+      pngIcons.facebook,
+
       [
         {
           name: 'description',
@@ -375,7 +399,9 @@ function CompanyCardContainer() {
       'Facebook Post Generator',
       types.SOCIAL_MEDIA.value,
       platforms.FACEBOOK.value,
-      platforms.FACEBOOK.logo,
+      pngIcons.facebook,
+      pngIcons.facebook,
+
       [
         {
           name: 'productName',
@@ -393,7 +419,9 @@ function CompanyCardContainer() {
       'Instagram Story Generator',
       types.SOCIAL_MEDIA.value,
       platforms.INSTAGRAM.value,
-      platforms.INSTAGRAM.logo,
+      pngIcons.instagram,
+      pngIcons.instagram,
+
       [
         {
           name: 'description',
@@ -411,7 +439,9 @@ function CompanyCardContainer() {
       'Instagram Post Generator',
       types.SOCIAL_MEDIA.value,
       platforms.INSTAGRAM.value,
-      platforms.INSTAGRAM.logo,
+      pngIcons.instagram,
+      pngIcons.instagram,
+
       [
         {
           name: 'description',
@@ -429,7 +459,9 @@ function CompanyCardContainer() {
       'Linkedin Post Generator',
       types.SOCIAL_MEDIA.value,
       platforms.LINKEDIN.value,
-      platforms.LINKEDIN.logo,
+      pngIcons.linkedin,
+      pngIcons.linkedin,
+
       [
         {
           name: 'description',
@@ -444,23 +476,33 @@ function CompanyCardContainer() {
     ),
   ]
   const allServices = [...email, ...adsCopy, ...ecommerce, ...socialMedia]
-
+  const [value, setValue] = useState('')
+  const [input, setInput] = useState('')
+  const display = false
   return (
     <Box
       sx={{
         overflow: 'auto',
-        height: '70vh',
+        height: '75vh',
         display: 'grid',
         gridTemplateColumns: 'repeat(3,1fr)',
       }}
     >
-      {allServices.map((service, index) => (
-        <ServiceCard key={index} {...service} />
-      ))}
+      {display && (
+        <>
+          {allServices.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
+          <Select options={[{ value: 1, label: 'One' }]} value={value} setValue={setValue} />
+          <Input label={'input'} value={input} setValue={setInput} />
+          <TextArea label="Text area" text="Sample text" />
+        </>
+      )}
+
       {/* {companyData.map((company, index) => (
         <CompanyCard
           key={index}
-          logoUrl={company.logoUrl}
+          itemLogo={company.itemLogo}
           menuItems={company.menuItems}
           name={company.name}
         />
@@ -474,7 +516,7 @@ interface ServiceInterface {
   tagline: string
   type: string
   platform: string
-  logoUrl: string
+  itemLogo: string
   inputs: any
   response: any
 }
@@ -486,7 +528,7 @@ const ServiceCard = ({
   tagline,
   type,
   platform,
-  logoUrl,
+  itemLogo,
   inputs,
   response,
 }: ServiceInterface) => {
@@ -510,11 +552,12 @@ const ServiceCard = ({
           },
         }),
       ]}
+      onClick={() => console.log(title, ' Clicked')}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <img src={companyLogo} alt="Logo" style={{ height: '32px' }} />
+        <img src={itemLogo} alt="Logo" style={{ height: '32px' }} />
       </Box>
-      <Typography variant="body1" sx={{ fontSize: 10, pt: 1, pl: 1, pr: 1 }}>
+      <Typography variant="body1" sx={{ fontSize: 9, pt: 1, pl: 1, pr: 1 }}>
         {title}
       </Typography>
       {/* <Typography variant="body1">{tagline}</Typography> */}

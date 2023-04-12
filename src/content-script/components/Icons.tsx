@@ -1,5 +1,33 @@
 import { Box } from '@mui/material'
 import { SvgIconProps } from '@mui/material/SvgIcon'
+import adsense from '../assets/icons/adsense.png'
+import amazon from '../assets/icons/amazon.png'
+import chatgpt from '../assets/icons/chatgpt.png'
+import depop from '../assets/icons/depop.png'
+import ebay from '../assets/icons/ebay.png'
+import facebook from '../assets/icons/facebook.png'
+import gmail from '../assets/icons/gmail.png'
+import instagram from '../assets/icons/instagram.png'
+import linkedin from '../assets/icons/linkedin.png'
+import twitter from '../assets/icons/twitter.png'
+import walmart from '../assets/icons/walmart.png'
+import yahoo from '../assets/icons/yahoo.png'
+
+const pngIcons = {
+  adsense,
+  amazon,
+  chatgpt,
+  depop,
+  ebay,
+  facebook,
+  gmail,
+  instagram,
+  linkedin,
+  twitter,
+  walmart,
+  yahoo,
+}
+
 const GptIcon = (props: SvgIconProps) => {
   return (
     <Box sx={{ width: 30 }}>
@@ -70,4 +98,4 @@ const GptIcon = (props: SvgIconProps) => {
   )
 }
 
-export { GptIcon }
+export { GptIcon, pngIcons }

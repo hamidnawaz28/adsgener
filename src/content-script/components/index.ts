@@ -1,3 +1,7 @@
 export { default as CompanyCardContainer } from './CompanyCardContainer'
 export { default as DialogContainer } from './DialogContainer'
+export * from './Icons'
+export { default as Input } from './Input'
 export { default as Modal } from './Modal'
+export { default as Select } from './Select'
+export { default as TextArea } from './TextArea'

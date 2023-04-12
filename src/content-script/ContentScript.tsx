@@ -1,4 +1,3 @@
-import { Box } from '@mui/material'
 import { useState } from 'react'
 import { CompanyCardContainer, DialogContainer } from './components'
 const ContentScript = () => {
@@ -12,7 +11,7 @@ const ContentScript = () => {
       loading={loading}
       setLoading={setLoading}
     >
-      <Box>AdsGener</Box>
+      {/* <Box>AdsGener</Box> */}
       <CompanyCardContainer />
     </DialogContainer>
   )
